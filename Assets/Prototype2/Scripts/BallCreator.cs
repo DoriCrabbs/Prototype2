@@ -10,6 +10,9 @@ public class BallCreator : MonoBehaviour
     [SerializeField]
     private GameObject currentBall;
 
+    [SerializeField]
+    private float lowerLimit;
+
     private void Update()
     {
         CheckBallPosition();
@@ -22,7 +25,7 @@ public class BallCreator : MonoBehaviour
             return;
         }
 
-        if (currentBall.transform.position.y < -14f)
+        if (currentBall.transform.position.y < lowerLimit)
         {
             Destroy(currentBall);
             currentBall = null;

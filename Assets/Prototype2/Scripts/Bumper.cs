@@ -7,6 +7,9 @@ public class Bumper : MonoBehaviour
     [SerializeField]
     private int force;
 
+    [SerializeField]
+    private int forceMultiplier = 100;
+
     public void SetForce(int newforce)
     {
         force = newforce;
@@ -15,6 +18,6 @@ public class Bumper : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Pooiinng");
-        collision.collider.GetComponent<Rigidbody>().AddForce(transform.up * 100f * force);
+        collision.collider.GetComponent<Rigidbody>().AddForce(transform.up * forceMultiplier * force);
     }
 }
