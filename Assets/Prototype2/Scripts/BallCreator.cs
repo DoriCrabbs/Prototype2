@@ -16,6 +16,9 @@ public class BallCreator : MonoBehaviour
     [SerializeField]
     private GameObject ballCreatorImage;
 
+    [SerializeField]
+    private TutorialManager tutorialManager;
+
     private void Update()
     {
         CheckBallPosition();
@@ -52,6 +55,13 @@ public class BallCreator : MonoBehaviour
         currentBall.transform.position = transform.position;
 
         ShowBallCreatorImage(false);
+
+        if(tutorialManager == null)
+        {
+            return;
+        }
+
+        tutorialManager.StopPulseBallDispenser();
     }
 
     private void ShowBallCreatorImage(bool show)

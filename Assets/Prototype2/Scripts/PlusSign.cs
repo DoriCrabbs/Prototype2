@@ -14,6 +14,9 @@ public class PlusSign : MonoBehaviour
     [SerializeField]
     private Bumper bumper;
 
+    [SerializeField]
+    private TutorialManager tutorialManager;
+
     private void Start()
     {
         force = 1;
@@ -46,6 +49,13 @@ public class PlusSign : MonoBehaviour
     private void OnMouseDown()
     {
         AddForce();
+        
+        if(tutorialManager == null)
+        {
+            return;
+        }
+
+        tutorialManager.StopPulsePlusSigns();
     }
 
     private void UpdateBumper()

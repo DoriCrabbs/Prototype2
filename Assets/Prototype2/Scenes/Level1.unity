@@ -336,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9789896}
   - component: {fileID: 9789897}
+  - component: {fileID: 9789898}
   m_Layer: 0
   m_Name: water-globe
   m_TagString: Untagged
@@ -407,6 +408,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &9789898
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9789895}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 511558c2c942e8245885c3f2e9420663, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &122506224
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,12 +600,12 @@ GameObject:
   - component: {fileID: 299084947}
   - component: {fileID: 299084946}
   m_Layer: 0
-  m_Name: Curved-Arrow-Transparent-Images-PNG (1)
+  m_Name: Arrow_Ball_Dispenser_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &299084946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -853,12 +873,12 @@ GameObject:
   - component: {fileID: 504763244}
   - component: {fileID: 504763243}
   m_Layer: 0
-  m_Name: ForceText (8)
+  m_Name: Text_Plus_Sign_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &504763243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,7 +1061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.39, y: -14.33}
+  m_AnchoredPosition: {x: -6.82, y: 1.21}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &524381464
@@ -1169,6 +1189,7 @@ MonoBehaviour:
   forceText: {fileID: 842411497}
   force: 1
   bumper: {fileID: 1081375347}
+  tutorialManager: {fileID: 1058267919}
 --- !u!95 &524381469
 Animator:
   serializedVersion: 3
@@ -2133,6 +2154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058267918}
+  - component: {fileID: 1058267919}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -2154,6 +2176,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058267919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058267917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84153baecb9395440bab571d84578905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plusSignAnimations:
+  - {fileID: 524381469}
+  - {fileID: 1816109568}
+  - {fileID: 1060803152}
+  - {fileID: 2025698460}
+  - {fileID: 1539691136}
+  ballDispenserAnimation: {fileID: 9789898}
+  ballDispenserPulsing: 0
+  ballDispenserTutorialElements:
+  - {fileID: 299084945}
+  - {fileID: 1261346950}
+  plusSignsPulsing: 0
+  plusSignTutorialElements:
+  - {fileID: 1373367021}
+  - {fileID: 504763242}
 --- !u!1 &1060803147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,6 +2238,7 @@ MonoBehaviour:
   forceText: {fileID: 1246205729}
   force: 1
   bumper: {fileID: 1036320107}
+  tutorialManager: {fileID: 1058267919}
 --- !u!61 &1060803149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2835,12 +2885,12 @@ GameObject:
   - component: {fileID: 1261346952}
   - component: {fileID: 1261346951}
   m_Layer: 0
-  m_Name: ForceText (7)
+  m_Name: Text_Ball_Dispenser_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1261346951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3130,12 +3180,12 @@ GameObject:
   - component: {fileID: 1373367023}
   - component: {fileID: 1373367022}
   m_Layer: 0
-  m_Name: Curved-Arrow-Transparent-Images-PNG (2)
+  m_Name: Arrow_Plus_Sign_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1373367022
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3194,7 +3244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373367021}
   m_LocalRotation: {x: -0.36272112, y: -0.9314598, z: 0.028513908, w: -0.0017404108}
-  m_LocalPosition: {x: -21.04, y: -16.54, z: -8.765625}
+  m_LocalPosition: {x: -6.46, y: -0.58, z: -8.765625}
   m_LocalScale: {x: 0.5, y: -0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3440,6 +3490,7 @@ MonoBehaviour:
   forceText: {fileID: 4024406}
   force: 1
   bumper: {fileID: 2140747153}
+  tutorialManager: {fileID: 1058267919}
 --- !u!61 &1539691133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4043,6 +4094,7 @@ MonoBehaviour:
   forceText: {fileID: 1517980268}
   force: 1
   bumper: {fileID: 480873696}
+  tutorialManager: {fileID: 1058267919}
 --- !u!61 &1816109565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4558,6 +4610,7 @@ MonoBehaviour:
   currentBall: {fileID: 0}
   lowerLimit: -25
   ballCreatorImage: {fileID: 9789895}
+  tutorialManager: {fileID: 1058267919}
 --- !u!61 &2016179652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4681,6 +4734,7 @@ MonoBehaviour:
   forceText: {fileID: 2007160821}
   force: 1
   bumper: {fileID: 889573864}
+  tutorialManager: {fileID: 1058267919}
 --- !u!61 &2025698457
 BoxCollider2D:
   m_ObjectHideFlags: 0
