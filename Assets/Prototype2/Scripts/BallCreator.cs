@@ -13,6 +13,9 @@ public class BallCreator : MonoBehaviour
     [SerializeField]
     private float lowerLimit;
 
+    [SerializeField]
+    private GameObject ballCreatorImage;
+
     private void Update()
     {
         CheckBallPosition();
@@ -29,6 +32,7 @@ public class BallCreator : MonoBehaviour
         {
             Destroy(currentBall);
             currentBall = null;
+            ShowBallCreatorImage(true);
         }
     }
 
@@ -46,5 +50,17 @@ public class BallCreator : MonoBehaviour
 
         currentBall = GameObject.Instantiate(ballPrefab);
         currentBall.transform.position = transform.position;
+
+        ShowBallCreatorImage(false);
+    }
+
+    private void ShowBallCreatorImage(bool show)
+    {
+        if (ballCreatorImage == null)
+        {
+            return;
+        }
+
+        ballCreatorImage.SetActive(show);
     }
 }
