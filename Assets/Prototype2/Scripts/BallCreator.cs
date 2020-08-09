@@ -14,6 +14,9 @@ public class BallCreator : MonoBehaviour
     private float lowerLimit;
 
     [SerializeField]
+    private float rightLimit;
+
+    [SerializeField]
     private GameObject ballCreatorImage;
 
     [SerializeField]
@@ -31,7 +34,7 @@ public class BallCreator : MonoBehaviour
             return;
         }
 
-        if (currentBall.transform.position.y < lowerLimit)
+        if (currentBall.transform.position.y < lowerLimit || currentBall.transform.position.x > rightLimit)
         {
             Destroy(currentBall);
             currentBall = null;

@@ -17,7 +17,6 @@ public class Bumper : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Pooiinng");
         collision.collider.GetComponent<Rigidbody>().AddForce(transform.up * forceMultiplier * force);
     }
 }
