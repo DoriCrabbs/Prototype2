@@ -40,7 +40,10 @@ public class TutorialManager : MonoBehaviour
 
         for (int i = 0; i < plusSignAnimations.Count; i++)
         {
-            plusSignAnimations[i].Play("Plus_Sign_Pulse");
+            if(plusSignAnimations[i] != null)
+            {
+                plusSignAnimations[i].Play("Plus_Sign_Pulse");
+            }
         }
 
         ShowPlusSignsTutorialElements(true);
@@ -57,7 +60,10 @@ public class TutorialManager : MonoBehaviour
 
         for (int i = 0; i < plusSignAnimations.Count; i++)
         {
-            plusSignAnimations[i].Play("Plus_Sign_Idle");
+            if (plusSignAnimations[i] != null)
+            { 
+                plusSignAnimations[i].Play("Plus_Sign_Idle");
+            }
         }
 
         ShowPlusSignsTutorialElements(false);
@@ -68,7 +74,10 @@ public class TutorialManager : MonoBehaviour
     {
         for (int i = 0; i < plusSignTutorialElements.Count; i++)
         {
-            plusSignTutorialElements[i].SetActive(show);
+            if(plusSignTutorialElements[i] != null)
+            {
+                plusSignTutorialElements[i].SetActive(show);
+            }
         }
     }
 
