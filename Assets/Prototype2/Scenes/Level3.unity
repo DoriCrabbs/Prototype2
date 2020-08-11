@@ -564,7 +564,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 04fa9e1e5941cdf4d8d3203d75e148b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f252d21288e89f45bfd49f56205f465, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_FlipX: 0
   m_FlipY: 0
@@ -583,8 +583,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196649631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.072606, y: 2.7, z: 12.1}
-  m_LocalScale: {x: 4.1841455, y: 4.1841455, z: 4.1841455}
+  m_LocalPosition: {x: 8.5, y: 2.7, z: 12.1}
+  m_LocalScale: {x: 2.4173658, y: 2.4173658, z: 2.4173658}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 29
@@ -4589,6 +4589,7 @@ MonoBehaviour:
     type: 3}
   currentBall: {fileID: 0}
   lowerLimit: -25
+  rightLimit: 0
   ballCreatorImage: {fileID: 9789895}
   tutorialManager: {fileID: 0}
 --- !u!61 &2016179652
