@@ -1297,6 +1297,11 @@ PrefabInstance:
       propertyPath: winningText
       value: 
       objectReference: {fileID: 1560070767}
+    - target: {fileID: 6558171696564372435, guid: 7a6d864c15a496641bde5d29f2cbf37d,
+        type: 3}
+      propertyPath: winLevelName
+      value: Win_Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 6558171696598542728, guid: 7a6d864c15a496641bde5d29f2cbf37d,
         type: 3}
       propertyPath: m_LocalPosition.x
