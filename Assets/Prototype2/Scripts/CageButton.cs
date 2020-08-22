@@ -14,13 +14,17 @@ public class CageButton : MonoBehaviour
     [SerializeField]
     private string winLevelName;
 
+    [SerializeField]
+    private int levelIndex;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (winningText == null)
+        if (winningText != null)
         {
-            return;
+            winningText.SetActive(true);
         }
-        winningText.SetActive(true);
+        Debug.Log("Set level to " + levelIndex);
+        GameSceneManager.currentLevel = levelIndex;
         Time.timeScale = 0f;
         StartCoroutine(LoadWinScene());
     }
