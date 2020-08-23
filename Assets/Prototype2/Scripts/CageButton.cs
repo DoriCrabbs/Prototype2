@@ -23,7 +23,6 @@ public class CageButton : MonoBehaviour
         {
             winningText.SetActive(true);
         }
-        Debug.Log("Set level to " + levelIndex);
         GameSceneManager.currentLevel = levelIndex;
         Time.timeScale = 0f;
         StartCoroutine(LoadWinScene());

@@ -11,6 +11,9 @@ public class NextSceneLoader : MonoBehaviour
     [SerializeField]
     private string[] levels;
 
+    [SerializeField]
+    private GameObject finishText;
+
     private void Start()
     {
         Time.timeScale = 1f;
@@ -21,7 +24,13 @@ public class NextSceneLoader : MonoBehaviour
     private IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(delay);
-        Debug.Log("Load next level " + (GameSceneManager.currentLevel + 1));
-        SceneManager.LoadSceneAsync(levels[GameSceneManager.currentLevel + 1]);
+        if(GameSceneManager.currentLevel < 3)
+        {
+            SceneManager.LoadSceneAsync(levels[GameSceneManager.currentLevel + 1]);
+        }
+        else
+        {
+            finishText.SetActive(true);
+        }
     }
 }

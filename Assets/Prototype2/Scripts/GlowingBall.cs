@@ -12,7 +12,10 @@ public class GlowingBall : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        GameSceneManager.Instance.AddGlowingBall();
+        if(GameSceneManager.Instance != null)
+        {
+            GameSceneManager.Instance.AddGlowingBall();
+        }
         GameObject.Destroy(gameObject);
     }
 }
