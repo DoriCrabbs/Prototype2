@@ -22,17 +22,6 @@ public class CageButton : MonoBehaviour
     [SerializeField]
     private Transform energyTarget;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (winningText != null)
-        {
-            winningText.SetActive(true);
-        }
-        GameSceneManager.currentLevel = levelIndex;
-        Time.timeScale = 0f;
-        StartCoroutine(LoadWinScene());
-    }
-
     public void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.layer == 9
@@ -42,6 +31,7 @@ public class CageButton : MonoBehaviour
             var rigidBody = collider.gameObject.GetComponent<Rigidbody>();
             if(rigidBody != null)
             {
+                GameSceneManager.currentLevel = levelIndex;
                 Rigidbody.Destroy(rigidBody);
                 collider.transform.DOLocalMove(energyTarget.position, 1f);
                 collider.SendMessage("StopEffects");

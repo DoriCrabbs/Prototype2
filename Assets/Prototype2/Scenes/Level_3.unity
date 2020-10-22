@@ -1934,6 +1934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 1
   forceMultiplier: 200
+  punchAnimation: {fileID: 0}
 --- !u!1 &1161286156
 GameObject:
   m_ObjectHideFlags: 0
