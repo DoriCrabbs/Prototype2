@@ -24,6 +24,7 @@ public class GlowingBall : MonoBehaviour
             {
                 if(GameSceneManager.Instance != null)
                 {
+                    GameSceneManager.Instance.AddGlowingBall(4);
                     GameSceneManager.Instance.AddEssentialGlowingBall();
                 }
             }
@@ -31,7 +32,7 @@ public class GlowingBall : MonoBehaviour
             {
                 if (GameSceneManager.Instance != null)
                 {
-                    GameSceneManager.Instance.AddGlowingBall();
+                    GameSceneManager.Instance.AddGlowingBall(1);
                 }
             }
         }
