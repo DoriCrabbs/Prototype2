@@ -24,7 +24,7 @@ public class CageButton : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.layer == 9
+        if (collider.gameObject.tag == "Ball"
             && energyTarget != null
             && GameSceneManager.essentialGlowingBalls >= GameSceneManager.essentialGlowingBallsMin)
         {
@@ -35,6 +35,7 @@ public class CageButton : MonoBehaviour
                 Rigidbody.Destroy(rigidBody);
                 collider.transform.DOLocalMove(energyTarget.position, 1f);
                 collider.SendMessage("StopEffects");
+                MainMenu.SaveGame(GameSceneManager.glowingBalls, levelIndex);
                 StartCoroutine(LoadWinScene());
             }
         }

@@ -5,25 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    private void Start()
-    {
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SaveGame(15, "Level_2");
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            PlayerPrefs.DeleteAll();
-        }
-    }
-
     public void ContinueGame()
     {
-        SceneManager.LoadSceneAsync(PlayerPrefs.GetString("SavedLevel"));
+        GameSceneManager.currentLevel = PlayerPrefs.GetInt("SavedLevel");
+        GameSceneManager.glowingBalls = PlayerPrefs.GetInt("GlowingBalls");
+        SceneManager.LoadSceneAsync("Win_Scene");
     }
 
     public void StartNewGame()
@@ -37,13 +23,18 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void DeleteSaveGames()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     public static void SaveGame(
         int glowingBalls,
-        string lastCompletedLevel
+        int lastCompletedLevel
         )
     {
         PlayerPrefs.SetInt("HasSavedGame", 1);
         PlayerPrefs.SetInt("GlowingBalls", glowingBalls);
-        PlayerPrefs.SetString("SavedLevel", lastCompletedLevel);
+        PlayerPrefs.SetInt("SavedLevel", lastCompletedLevel);
     }
 }

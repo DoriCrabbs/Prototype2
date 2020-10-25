@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameSceneManager : MonoBehaviour
 {
@@ -12,12 +13,14 @@ public class GameSceneManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        if(Instance != null)
-        {
-            GameObject.Destroy(gameObject);
-        }
         Instance = this;
         ResetLevel();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        UpdateUi();
     }
 
     private void ResetLevel()
@@ -32,26 +35,24 @@ public class GameSceneManager : MonoBehaviour
         {
             return;
         }
-        glowingBallsUi.text = "Glowing balls: " + glowingBalls.ToString();
+        glowingBallsUi.text = "Sun globes: " + glowingBalls.ToString();
     }
 
-    public void AddGlowingBall()
+    public void AddGlowingBall(int number)
     {
-        glowingBalls++;
+        glowingBalls += number;
         UpdateUi();
     }
 
     public void AddEssentialGlowingBallMin()
     {
         essentialGlowingBallsMin++;
-        Debug.Log($"Essential glowing ball: {essentialGlowingBallsMin}");
         UpdateUi();
     }
 
     public void AddEssentialGlowingBall()
     {
         essentialGlowingBalls++;
-        Debug.Log($"Essential glowing ball: {essentialGlowingBalls}");
         UpdateUi();
     }
 
