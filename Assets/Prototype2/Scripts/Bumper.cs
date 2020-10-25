@@ -13,8 +13,7 @@ public class Bumper : MonoBehaviour
     private int forceMultiplier = 100;
 
     [SerializeField]
-    private DOTweenAnimation punchAnimation;
-
+    private Transform mushroomImage;
     public void SetForce(int newforce)
     {
         force = newforce;
@@ -23,9 +22,9 @@ public class Bumper : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         collision.collider.GetComponent<Rigidbody>().AddForce(transform.up * forceMultiplier * force);
-        if (punchAnimation)
+        if (mushroomImage)
         {
-            punchAnimation.DORestart();
+            mushroomImage.DOPunchPosition(new Vector3(0f, force * 0.2f, 0f), 1f);
         }
     }
 }

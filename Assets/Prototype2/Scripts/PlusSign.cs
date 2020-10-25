@@ -17,6 +17,9 @@ public class PlusSign : MonoBehaviour
     [SerializeField]
     private TutorialManager tutorialManager;
 
+    [SerializeField]
+    private List<GameObject> forceBalls;
+
     private void Start()
     {
         force = 1;
@@ -39,6 +42,23 @@ public class PlusSign : MonoBehaviour
 
     private void UpdateText()
     {
+        for (int i = 0; i < forceBalls.Count; i++)
+        {
+            if(i < force)
+            {
+                if(forceBalls[i] != null)
+                {
+                    forceBalls[i].SetActive(true);
+                }
+            }
+            else
+            {
+                if (forceBalls[i] != null)
+                {
+                    forceBalls[i].SetActive(false);
+                }
+            }
+        }
         if (forceText == null)
         {
             return;
