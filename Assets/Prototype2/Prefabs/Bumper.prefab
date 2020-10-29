@@ -137,15 +137,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931591539950872435}
   m_LocalRotation: {x: -0, y: -0, z: 0.21052496, w: 0.9775885}
-  m_LocalPosition: {x: 0.13, y: -0.621, z: 0}
-  m_LocalScale: {x: 0.38531902, y: 0.38531902, z: 0.38531902}
+  m_LocalPosition: {x: 0, y: 4.980289, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2745646607369239632}
   - {fileID: 3667037954966641629}
   - {fileID: 1626952263092183182}
   - {fileID: 6617669753376728883}
   - {fileID: 3204848995835300616}
-  m_Father: {fileID: 7553771408871641416}
+  m_Father: {fileID: 7777711090525700178}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 24.306002}
 --- !u!212 &6414638338759231417
@@ -229,6 +229,37 @@ Transform:
   - {fileID: 7553771409840456541}
   m_Father: {fileID: 397302697890724906}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4104719038783680724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7777711090525700178}
+  m_Layer: 0
+  m_Name: FungusRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7777711090525700178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104719038783680724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13000001, y: -2.54, z: 0}
+  m_LocalScale: {x: 0.385319, y: 0.385319, z: 0.38531902}
+  m_Children:
+  - {fileID: 1530471189823487021}
+  m_Father: {fileID: 7553771408871641416}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4242939620760568732
 GameObject:
@@ -536,7 +567,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.63, y: 1.63, z: 1.63}
   m_Children:
-  - {fileID: 1530471189823487021}
+  - {fileID: 7777711090525700178}
   m_Father: {fileID: 3538885498597325433}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -617,7 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 1
   forceMultiplier: 200
-  mushroomImage: {fileID: 1530471189823487021}
+  mushroomImage: {fileID: 7777711090525700178}
 --- !u!114 &7989486967609784392
 MonoBehaviour:
   m_ObjectHideFlags: 0

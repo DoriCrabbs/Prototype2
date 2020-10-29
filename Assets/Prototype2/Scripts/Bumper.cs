@@ -24,7 +24,7 @@ public class Bumper : MonoBehaviour
         collision.collider.GetComponent<Rigidbody>().AddForce(transform.up * forceMultiplier * force);
         if (mushroomImage)
         {
-            mushroomImage.DOPunchPosition(new Vector3(0f, force * 0.2f, 0f), 1f);
+            mushroomImage.DOPunchScale(new Vector3(0f, force * 0.02f, 0f), 1f);
         }
     }
 }
