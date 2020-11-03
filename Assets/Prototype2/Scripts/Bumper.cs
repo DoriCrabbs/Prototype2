@@ -25,9 +25,9 @@ public class Bumper : MonoBehaviour
     if (mushroomImage)
     {
       //mushroomImage.DOPunchScale(new Vector3(0f, force * 0.06f, 0f), 1f);
-      float time = 0.3f;
+      float time = 0.6f;
       int vibrato = 10;
-      float elasticity = 0.6f;
+      float elasticity = 0.9f;
       mushroomImage.DOPunchScale(new Vector3(0.01f, 0.12f, 0f), time, vibrato, elasticity);
     }
   }
