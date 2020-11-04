@@ -308,6 +308,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Branch_trunk
       objectReference: {fileID: 0}
+    - target: {fileID: 5269832151766662693, guid: a5bfd97f638dbae44b75a32276512e99,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5269832151766662695, guid: a5bfd97f638dbae44b75a32276512e99,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1992,6 +1997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TreeTrunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727377986716775640, guid: 171ee401faa4ec74d8ddd0b76e9eddc3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 171ee401faa4ec74d8ddd0b76e9eddc3, type: 3}
