@@ -24,13 +24,11 @@ public class NextSceneLoader : MonoBehaviour
     private IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(delay);
-        if(GameSceneManager.currentLevel < 3)
-        {
-            SceneManager.LoadSceneAsync(levels[GameSceneManager.currentLevel + 1]);
-        }
-        else
-        {
-            finishText.SetActive(true);
-        }
+        
+
+
+
+
+
     }
 }

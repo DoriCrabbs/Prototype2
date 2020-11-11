@@ -1008,29 +1008,6 @@ MonoBehaviour:
   plusSignTutorialElements:
   - {fileID: 1373367021}
   - {fileID: 504763242}
---- !u!1 &1066601063 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6558171696598542729, guid: 7a6d864c15a496641bde5d29f2cbf37d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1448411611056548963}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1066601064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066601063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539e530756a91ce41984f36824319dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winningText: {fileID: 0}
-  delay: 5
-  winLevelName: Win_Scene
-  levelIndex: 0
-  energyTarget: {fileID: 0}
 --- !u!1001 &1216516526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2503,6 +2480,11 @@ PrefabInstance:
     - target: {fileID: 6558171696564372435, guid: 7a6d864c15a496641bde5d29f2cbf37d,
         type: 3}
       propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558171696564372435, guid: 7a6d864c15a496641bde5d29f2cbf37d,
+        type: 3}
+      propertyPath: levelIndex
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6558171696598542728, guid: 7a6d864c15a496641bde5d29f2cbf37d,

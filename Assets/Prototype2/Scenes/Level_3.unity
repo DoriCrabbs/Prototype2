@@ -391,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 6558171696564372435, guid: 7a6d864c15a496641bde5d29f2cbf37d,
         type: 3}
       propertyPath: levelIndex
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6558171696564372435, guid: 7a6d864c15a496641bde5d29f2cbf37d,
         type: 3}
@@ -1648,10 +1648,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4201179347234871042, guid: 04c7437241c4b8344a0223f719f04080,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201179347234871044, guid: 04c7437241c4b8344a0223f719f04080,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201179347234871044, guid: 04c7437241c4b8344a0223f719f04080,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201179347596620283, guid: 04c7437241c4b8344a0223f719f04080,
+        type: 3}
+      propertyPath: isGlobal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201179347596620283, guid: 04c7437241c4b8344a0223f719f04080,
+        type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5785839236964362169, guid: 04c7437241c4b8344a0223f719f04080,
         type: 3}
       propertyPath: m_Name
       value: Cameras
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820462058036138851, guid: 04c7437241c4b8344a0223f719f04080,
+        type: 3}
+      propertyPath: isGlobal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820462058036138851, guid: 04c7437241c4b8344a0223f719f04080,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827404816288051099, guid: 04c7437241c4b8344a0223f719f04080,
+        type: 3}
+      propertyPath: volumeLayer.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c7437241c4b8344a0223f719f04080, type: 3}
