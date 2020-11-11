@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4727377986716775638}
   - component: {fileID: 4727377986716775641}
+  - component: {fileID: 4887981245176384529}
   m_Layer: 0
   m_Name: TreeTrunk
   m_TagString: Untagged
@@ -49,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3697c99b31625c243bb421cf751c0992, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,3 +82,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4887981245176384529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4727377986716775640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfd6858b7070c5458452881438fd668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trunkRenderer: {fileID: 4727377986716775641}

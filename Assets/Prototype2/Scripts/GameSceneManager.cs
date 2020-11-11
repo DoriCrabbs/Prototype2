@@ -25,6 +25,9 @@ public class GameSceneManager : MonoBehaviour
     [SerializeField]
     private string[] levels;
 
+    [SerializeField]
+    private GlowTrunk trunkGlowAnimation;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -35,6 +38,7 @@ public class GameSceneManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        trunkGlowAnimation = FindObjectOfType<GlowTrunk>();
         UpdateUi();
     }
 
@@ -56,7 +60,7 @@ public class GameSceneManager : MonoBehaviour
     private IEnumerator WinLevel()
     {
         yield return new WaitForSeconds(1);
-        //GlowTrunk();
+        GlowTrunk();
         Debug.Log("Glow or tint tree");
         yield return new WaitForSeconds(1);
         Debug.Log("Blur background");
@@ -134,15 +138,15 @@ public class GameSceneManager : MonoBehaviour
         if(levelNameUi != null)
         {
             levelNameUi.gameObject.SetActive(showHide);
-            levelNameUi.DOText("Level " + currentLevel + " Completed! \nPoints on this level: 40 \nLevel of completion: 93%", 5f);
+            levelNameUi.DOText("Level " + currentLevel + " Completed! \nScore on this level: 40 \nTotal score: 100", 5f);
         }
     }
 
     public void GlowTrunk()
     {
-        if(trunkMaterial != null)
+        if(trunkGlowAnimation != null)
         {
-            trunkMaterial.DOColor(Color.white, "_EmissionColor", 3f);
+            trunkGlowAnimation.Glow();
         }
     }
 
