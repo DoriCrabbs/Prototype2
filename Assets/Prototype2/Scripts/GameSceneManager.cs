@@ -59,10 +59,10 @@ public class GameSceneManager : MonoBehaviour
 
     private IEnumerator WinLevel()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         GlowTrunk();
         Debug.Log("Glow or tint tree");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         Debug.Log("Blur background");
         //Blur(true);
         yield return new WaitForSeconds(1);
