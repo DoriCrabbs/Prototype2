@@ -873,6 +873,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball_Dispenser (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3892086075868265415, guid: 08ab857eb54d2fd4b8164e52bf1f66fc,
+        type: 3}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 1058267919}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08ab857eb54d2fd4b8164e52bf1f66fc, type: 3}
 --- !u!1001 &976877201

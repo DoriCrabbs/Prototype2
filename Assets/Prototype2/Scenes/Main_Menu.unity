@@ -383,7 +383,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 466293521}
+      - m_Target: {fileID: 1824452081}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -392,11 +392,22 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1824452081}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1820174257}
+        m_MethodName: DeleteSaveGames
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1820174257}
+        m_MethodName: StartNewGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1005,7 +1016,7 @@ GameObject:
   - component: {fileID: 466293524}
   - component: {fileID: 466293523}
   m_Layer: 5
-  m_Name: Panel_New_Game
+  m_Name: Panel_Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6591,7 +6602,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: No
+  m_Text: Continue
 --- !u!222 &835292612
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22150,7 +22161,7 @@ GameObject:
   - component: {fileID: 1562200628}
   - component: {fileID: 1562200627}
   m_Layer: 5
-  m_Name: Cinformation
+  m_Name: Choose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22173,7 +22184,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 960, y: -490}
-  m_SizeDelta: {x: 1000, y: 500}
+  m_SizeDelta: {x: 1100, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562200627
 MonoBehaviour:
@@ -22207,10 +22218,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Are you sure you want to start a new game?
+  m_Text: 'Would you like a start a new game,
 
-    (All your progress will
-    be lost.)'
+    or continue where you popped out
+    last time?'
 --- !u!222 &1562200628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27821,7 +27832,7 @@ GameObject:
   - component: {fileID: 1988998275}
   - component: {fileID: 1988998274}
   m_Layer: 5
-  m_Name: Button_Confirm
+  m_Name: Button_New_Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28092,7 +28103,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yes
+  m_Text: New Game
 --- !u!222 &2080762500
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28203,7 +28214,7 @@ GameObject:
   - component: {fileID: 2119316000}
   - component: {fileID: 2119315999}
   m_Layer: 5
-  m_Name: Button_Cancel
+  m_Name: Button_Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28272,20 +28283,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1824452081}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 466293521}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1820174257}
+        m_MethodName: ContinueGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
