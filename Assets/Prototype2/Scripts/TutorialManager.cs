@@ -109,7 +109,10 @@ public class TutorialManager : MonoBehaviour
     {
         for (int i = 0; i < ballDispenserTutorialElements.Count; i++)
         {
-            ballDispenserTutorialElements[i].SetActive(show);
+            if(ballDispenserTutorialElements[i] != null)
+            {
+                ballDispenserTutorialElements[i].SetActive(show);
+            }
         }
     }
 }

@@ -7,13 +7,16 @@ public class MainMenu : MonoBehaviour
 {
     public void ContinueGame()
     {
-        GameSceneManager.currentLevel = PlayerPrefs.GetInt("SavedLevel");
+        GameSceneManager.currentLevel = (PlayerPrefs.GetInt("SavedLevel") + 1);
         GameSceneManager.glowingBalls = PlayerPrefs.GetInt("GlowingBalls");
         //SceneManager.LoadSceneAsync("Win_Scene");
-        Debug.Log($"Scene: {GameSceneManager.currentLevel}");
-        if (GameSceneManager.currentLevel < 4)
+        Debug.Log($"Load this level at continue: {GameSceneManager.currentLevel}");
+        if (GameSceneManager.currentLevel < 5)
         {
-            SceneManager.LoadSceneAsync(GameSceneManager.currentLevel + 1);
+            SceneManager.LoadSceneAsync(GameSceneManager.currentLevel);
+        }
+        {
+            SceneManager.LoadSceneAsync("Win_Scene");
         }
     }
 

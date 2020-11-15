@@ -184,7 +184,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7798997054479398340, guid: ef882c418a5df7b438220ba6b2c25c00, type: 2}
+  - {fileID: -1726949584223018632, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -242,8 +242,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Glowing balls: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef882c418a5df7b438220ba6b2c25c00, type: 2}
-  m_sharedMaterial: {fileID: -7798997054479398340, guid: ef882c418a5df7b438220ba6b2c25c00,
+  m_fontAsset: {fileID: 11400000, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
+  m_sharedMaterial: {fileID: -1726949584223018632, guid: 3ae3090ebb0ffee479fcea27ff3b60c1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -421,6 +421,7 @@ MonoBehaviour:
   - Level_1
   - Level_2
   - Level_3
+  trunkGlowAnimation: {fileID: 0}
 --- !u!1 &4295906236418261126
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +479,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7798997054479398340, guid: ef882c418a5df7b438220ba6b2c25c00, type: 2}
+  - {fileID: -1726949584223018632, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -536,7 +537,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef882c418a5df7b438220ba6b2c25c00, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
   m_sharedMaterial: {fileID: -7798997054479398340, guid: ef882c418a5df7b438220ba6b2c25c00,
     type: 2}
   m_fontSharedMaterials: []
@@ -569,7 +570,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -615,7 +616,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 3934095907793538439}
   m_subTextObjects:
   - {fileID: 0}
