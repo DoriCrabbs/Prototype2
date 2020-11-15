@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prototype2/Scenes/Level_3.unity
     guid: 2e2850bf926cf644686c5859dc18fb0e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Prototype2/Scenes/Win_Scene.unity
     guid: 12134bc5c8d99bd4a8adb87472dcd34e
   m_configObjects: {}

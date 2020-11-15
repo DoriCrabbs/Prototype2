@@ -205,7 +205,7 @@ SpriteRenderer:
   m_Size: {x: 12, y: 15.63}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &82041
@@ -390,9 +390,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 5
   levels:
+  - Main_Menu
+  - Level_1
   - Level_Tutorial
   - Level_1
   - Level_2
+  - Level_3
   - Level_3
   finishText: {fileID: 946241936}
 --- !u!4 &697216379
@@ -493,7 +496,7 @@ SpriteRenderer:
   m_Size: {x: 12, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &804435231
@@ -733,7 +736,7 @@ SpriteRenderer:
   m_Size: {x: 12, y: 15.63}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1204605928
@@ -1035,7 +1038,7 @@ SpriteRenderer:
   m_Size: {x: 12, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1518486059

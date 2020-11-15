@@ -9,7 +9,12 @@ public class MainMenu : MonoBehaviour
     {
         GameSceneManager.currentLevel = PlayerPrefs.GetInt("SavedLevel");
         GameSceneManager.glowingBalls = PlayerPrefs.GetInt("GlowingBalls");
-        SceneManager.LoadSceneAsync("Win_Scene");
+        //SceneManager.LoadSceneAsync("Win_Scene");
+        Debug.Log($"Scene: {GameSceneManager.currentLevel}");
+        if (GameSceneManager.currentLevel < 4)
+        {
+            SceneManager.LoadSceneAsync(GameSceneManager.currentLevel + 1);
+        }
     }
 
     public void StartNewGame()

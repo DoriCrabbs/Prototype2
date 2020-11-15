@@ -94,6 +94,7 @@ public class GameSceneManager : MonoBehaviour
         if (GameSceneManager.currentLevel < 4)
         {
             ClearLevelName();
+            Debug.Log("Load level: " + currentLevel + 1);
             SceneManager.LoadSceneAsync(levels[currentLevel + 1]);
         }
         else

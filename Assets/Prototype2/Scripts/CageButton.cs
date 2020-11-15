@@ -19,8 +19,8 @@ public class CageButton : MonoBehaviour
     [SerializeField]
     private string winLevelName;
 
-    [SerializeField]
-    private int levelIndex;
+    //[SerializeField]
+    //private int levelIndex;
 
     [SerializeField]
     private Transform energyTarget;
@@ -47,12 +47,12 @@ public class CageButton : MonoBehaviour
             if(rigidBody != null)
             {
                 StartCoroutine(PlayHappyWingAnimation());
-                GameSceneManager.currentLevel = levelIndex;
-                Debug.Log("Set level index: " + levelIndex);
+                GameSceneManager.currentLevel = SceneManager.GetActiveScene().buildIndex;
+                Debug.Log("Set level index: " + GameSceneManager.currentLevel);
                 Rigidbody.Destroy(rigidBody);
                 collider.transform.DOLocalMove(energyTarget.position, 1f);
                 collider.SendMessage("StopEffects");
-                MainMenu.SaveGame(GameSceneManager.glowingBalls, levelIndex);
+                MainMenu.SaveGame(GameSceneManager.glowingBalls, GameSceneManager.currentLevel);
                 ChangeFace(true);
                 //StartCoroutine(LoadWinScene());
                 if(GameSceneManager.Instance != null)
