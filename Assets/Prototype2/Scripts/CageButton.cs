@@ -19,9 +19,6 @@ public class CageButton : MonoBehaviour
     [SerializeField]
     private string winLevelName;
 
-    //[SerializeField]
-    //private int levelIndex;
-
     [SerializeField]
     private Transform energyTarget;
 
@@ -30,6 +27,15 @@ public class CageButton : MonoBehaviour
 
     [SerializeField]
     private Animator wingRight;
+
+    [SerializeField]
+    private Animator armLeft;
+
+    [SerializeField]
+    private Animator armRight;
+
+    [SerializeField]
+    private Animator body;
 
     [SerializeField]
     private SpriteRenderer faceHappy;
@@ -79,6 +85,18 @@ public class CageButton : MonoBehaviour
         if (wingRight != null)
         {
             wingRight.Play("Right_Wing_Happy");
+        }
+        if (body != null)
+        {
+            body.CrossFade("Mushin_Happy", 0.25f);
+        }
+        if (armRight != null)
+        {
+            armRight.Play("Arm_Right_Happy");
+        }
+        if (armLeft != null)
+        {
+            armLeft.Play("Arm_Left_Happy");
         }
     }
 

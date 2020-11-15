@@ -38,6 +38,7 @@ public class GameSceneManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        scoreOnThisLevel = 0;
         trunkGlowAnimation = FindObjectOfType<GlowTrunk>();
         UpdateUi();
     }
@@ -91,21 +92,21 @@ public class GameSceneManager : MonoBehaviour
 
     public void LoadNextScene()
     {
-        if (GameSceneManager.currentLevel < 4)
+        if (GameSceneManager.currentLevel < 5)
         {
             ClearLevelName();
-            Debug.Log("Load level: " + currentLevel + 1);
-            SceneManager.LoadSceneAsync(levels[currentLevel + 1]);
+            SceneManager.LoadSceneAsync(levels[currentLevel]);
         }
         else
         {
-            Debug.Log("You win!");
+            SceneManager.LoadSceneAsync("Win_Scene");
         }
     }
 
     public void AddGlowingBall(int number)
     {
         glowingBalls += number;
+        scoreOnThisLevel += number;
         UpdateUi();
     }
 
@@ -139,7 +140,7 @@ public class GameSceneManager : MonoBehaviour
         if(levelNameUi != null)
         {
             levelNameUi.gameObject.SetActive(showHide);
-            levelNameUi.DOText("Level " + currentLevel + " Completed! \nScore on this level: 40 \nTotal score: 100", 5f);
+            levelNameUi.DOText("Level " + currentLevel + " Completed! \nScore on this level: " + scoreOnThisLevel + "\nTotal score: " + glowingBalls, 5f);
         }
     }
 
@@ -156,4 +157,5 @@ public class GameSceneManager : MonoBehaviour
     public static int currentLevel;
     public static int essentialGlowingBallsMin;
     public static int essentialGlowingBalls;
+    public static int scoreOnThisLevel;
 }
