@@ -329,19 +329,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7803922, g: 0.95294124, b: 0.80392164, a: 1}
+  m_Color: {r: 0.058823533, g: 0.24313727, b: 0.25490198, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6c3ef129f22e8304a95794aa27ed4ac9, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 90725c724344f6448a9c2ffbf26484e8, type: 3}
+    m_FontSize: 52
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 52
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -478,7 +478,7 @@ RectTransform:
   m_GameObject: {fileID: 1458415338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.26, y: 1.26, z: 1.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1218075782}
   m_Father: {fileID: 1647013962}
@@ -487,7 +487,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -771, y: -366}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 270, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458415340
 MonoBehaviour:
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89dcd3825f8a1114f8bd95eb6dc45d0a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe7d3dd7807e5a64b91a8099949ef0fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -808,7 +808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -808, y: -123}
+  m_AnchoredPosition: {x: -836, y: -107}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739442170
@@ -830,12 +830,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hello there, \n\nI\u2019m Mushin, the Tree Spirit guarding for a tree 
+  m_text: "Hello there, \n\nI\u2019m Mushin, the Tree Spirit! \nGuardian for a tree
     living in the concrete jungle.\r\nHelp me gain some life force and restore the
-    health of the tree."
+    health of nature."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
-  m_sharedMaterial: {fileID: -1726949584223018632, guid: 3ae3090ebb0ffee479fcea27ff3b60c1,
+  m_fontAsset: {fileID: 11400000, guid: 7d15e19f207aa7049bb64bca9a27dfe1, type: 2}
+  m_sharedMaterial: {fileID: 8099344978284650737, guid: 7d15e19f207aa7049bb64bca9a27dfe1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -861,13 +861,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -878,7 +878,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 137
+  m_firstOverflowCharacterIndex: 97
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -899,13 +899,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -69.57495, y: 0, z: -143.69104, w: -142.35913}
+  m_margin: {x: -69.57495, y: 0, z: -193.77359, w: -142.35913}
   m_textInfo:
     textComponent: {fileID: 1739442170}
-    characterCount: 160
+    characterCount: 159
     spriteCount: 0
-    spaceCount: 31
-    wordCount: 29
+    spaceCount: 30
+    wordCount: 28
     linkCount: 0
     lineCount: 6
     pageCount: 1
