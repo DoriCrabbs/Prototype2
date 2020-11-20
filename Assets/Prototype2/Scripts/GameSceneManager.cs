@@ -69,7 +69,7 @@ public class GameSceneManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         ShowLevelNameUi(true);
         Debug.Log("Show end scene UI with points, all points, level completed text");
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(7);
         Debug.Log("Load next scene");
         LoadNextScene();
     }
@@ -140,7 +140,7 @@ public class GameSceneManager : MonoBehaviour
         if(levelNameUi != null)
         {
             levelNameUi.gameObject.SetActive(showHide);
-            levelNameUi.DOText("Level " + currentLevel + " Completed! \nScore on this level: " + scoreOnThisLevel + "\nTotal score: " + glowingBalls, 5f);
+            levelNameUi.DOText("Level " + currentLevel + " Completed! Yay! \nScore on this level: " + scoreOnThisLevel + "\nTotal score: " + glowingBalls, 5f);
         }
     }
 
