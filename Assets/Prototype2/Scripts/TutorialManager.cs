@@ -24,6 +24,9 @@ public class TutorialManager : MonoBehaviour
     [SerializeField]
     public List<GameObject> plusSignTutorialElements;
 
+    [SerializeField]
+    public List<GameObject> staticMushroomElements;
+
     private void Start()
     {
         StartPulsePlusSigns();
@@ -47,6 +50,7 @@ public class TutorialManager : MonoBehaviour
         }
 
         ShowPlusSignsTutorialElements(true);
+        ShowStaticMushroomTutorialElements(true);
     }
 
     public void StopPulsePlusSigns()
@@ -67,6 +71,7 @@ public class TutorialManager : MonoBehaviour
         }
 
         ShowPlusSignsTutorialElements(false);
+        ShowStaticMushroomTutorialElements(false);
         StartPulseBallDispenser();
     }
 
@@ -77,6 +82,17 @@ public class TutorialManager : MonoBehaviour
             if(plusSignTutorialElements[i] != null)
             {
                 plusSignTutorialElements[i].SetActive(show);
+            }
+        }
+    }
+
+    public void ShowStaticMushroomTutorialElements(bool show)
+    {
+        for (int i = 0; i < staticMushroomElements.Count; i++)
+        {
+            if (staticMushroomElements[i] != null)
+            {
+                staticMushroomElements[i].SetActive(show);
             }
         }
     }
