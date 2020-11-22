@@ -32,7 +32,13 @@ public class CageButton : MonoBehaviour
     private Animator armLeft;
 
     [SerializeField]
+    private SpriteRenderer armLeftSprite;
+
+    [SerializeField]
     private Animator armRight;
+
+    [SerializeField]
+    private SpriteRenderer armRightSprite;
 
     [SerializeField]
     private Animator body;
@@ -42,6 +48,16 @@ public class CageButton : MonoBehaviour
 
     [SerializeField]
     private SpriteRenderer faceNeutral;
+
+    [SerializeField]
+    private GameObject facePivot;
+
+    [SerializeField]
+    private SpriteRenderer swirlPivot;
+
+    [SerializeField]
+    private GameObject wingPivot;
+
 
     public void OnTriggerEnter(Collider collider)
     {
@@ -60,7 +76,6 @@ public class CageButton : MonoBehaviour
                 collider.SendMessage("StopEffects");
                 MainMenu.SaveGame(GameSceneManager.glowingBalls, GameSceneManager.currentLevel);
                 ChangeFace(true);
-                //StartCoroutine(LoadWinScene());
                 if(GameSceneManager.Instance != null)
                 {
                     GameSceneManager.Instance.StartWinLevel();
@@ -97,6 +112,48 @@ public class CageButton : MonoBehaviour
         if (armLeft != null)
         {
             armLeft.Play("Arm_Left_Happy");
+        }
+    }
+
+    public void ShowFace()
+    {
+        if(facePivot != null)
+        {
+            facePivot.transform.localScale = new Vector3(0.1f, 0.1f, 1f);
+            facePivot.SetActive(true);
+            facePivot.transform.DOScale(new Vector3(1f, 1f, 1f), 1f);
+        }
+    }
+
+    public void ShowSwirl()
+    {
+        if (swirlPivot != null)
+        {
+            swirlPivot.gameObject.SetActive(true);
+        }
+    }
+
+    public void ShowWings()
+    {
+        if (wingPivot != null)
+        {
+            wingPivot.transform.localScale = new Vector3(0.01f, 0.01f, 1f);
+            wingPivot.SetActive(true);
+            wingPivot.transform.DOScale(new Vector3(1f, 1f, 1f), 2f);
+        }
+    }
+
+    public void ShowArms()
+    {
+        if (armLeftSprite != null)
+        {
+            armLeftSprite.gameObject.SetActive(true);
+            armLeftSprite.DOFade(1f, 2f).From(0.01f);
+        }
+        if (armRightSprite != null)
+        {
+            armRightSprite.gameObject.SetActive(true);
+            armRightSprite.DOFade(1f, 2f).From(0.01f);
         }
     }
 

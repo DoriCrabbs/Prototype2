@@ -16,7 +16,7 @@ public class Bumper : MonoBehaviour
   private Transform mushroomImage;
   public void SetForce(int newforce)
   {
-    force = newforce;
+        force = newforce;
   }
 
   private void OnCollisionEnter(Collision collision)
@@ -24,7 +24,6 @@ public class Bumper : MonoBehaviour
     collision.collider.GetComponent<Rigidbody>().AddForce(transform.up * forceMultiplier * force);
     if (mushroomImage)
     {
-      //mushroomImage.DOPunchScale(new Vector3(0f, force * 0.06f, 0f), 1f);
       float time = 0.6f;
       int vibrato = 10;
       float elasticity = 0.9f;

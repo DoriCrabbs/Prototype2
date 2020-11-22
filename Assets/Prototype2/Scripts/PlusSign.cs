@@ -9,6 +9,9 @@ public class PlusSign : MonoBehaviour
     private TextMeshPro forceText;
 
     [SerializeField]
+    private int defaultFforce = 1;
+
+    [SerializeField]
     private int force;
 
     [SerializeField]
@@ -22,7 +25,7 @@ public class PlusSign : MonoBehaviour
 
     private void Start()
     {
-        force = 1;
+        SetForce(defaultFforce);
         UpdateText();
     }
 
@@ -36,6 +39,13 @@ public class PlusSign : MonoBehaviour
         {
             force = 1;
         }
+        UpdateText();
+        UpdateBumper();
+    }
+
+    private void SetForce(int newFforce)
+    {
+        force = newFforce;
         UpdateText();
         UpdateBumper();
     }

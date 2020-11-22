@@ -23,10 +23,13 @@ public class GameSceneManager : MonoBehaviour
     private Material trunkMaterial;
 
     [SerializeField]
-    private string[] levels;
+    private GlowTrunk trunkGlowAnimation;
 
     [SerializeField]
-    private GlowTrunk trunkGlowAnimation;
+    private GlowSwirl swirlGlowAnimation;
+
+    [SerializeField]
+    private Leaves leaves;
 
     private void Awake()
     {
@@ -40,6 +43,8 @@ public class GameSceneManager : MonoBehaviour
     {
         scoreOnThisLevel = 0;
         trunkGlowAnimation = FindObjectOfType<GlowTrunk>();
+        swirlGlowAnimation = FindObjectOfType<GlowSwirl>();
+        leaves = FindObjectOfType<Leaves>();
         UpdateUi();
     }
 
@@ -60,17 +65,16 @@ public class GameSceneManager : MonoBehaviour
 
     private IEnumerator WinLevel()
     {
+        yield return new WaitForSeconds(1);
+        GlowSwirl();
         yield return new WaitForSeconds(2);
         GlowTrunk();
-        Debug.Log("Glow or tint tree");
         yield return new WaitForSeconds(2);
-        Debug.Log("Blur background");
+        StartLeaves();
         //Blur(true);
         yield return new WaitForSeconds(1);
         ShowLevelNameUi(true);
-        Debug.Log("Show end scene UI with points, all points, level completed text");
         yield return new WaitForSeconds(7);
-        Debug.Log("Load next scene");
         LoadNextScene();
     }
 
@@ -92,15 +96,9 @@ public class GameSceneManager : MonoBehaviour
 
     public void LoadNextScene()
     {
-        if (GameSceneManager.currentLevel < 5)
-        {
-            ClearLevelName();
-            SceneManager.LoadSceneAsync(levels[currentLevel]);
-        }
-        else
-        {
-            SceneManager.LoadSceneAsync("Win_Scene");
-        }
+        ClearLevelName();
+        Debug.Log("Next scene: " + currentLevel + "Max: " + SceneManager.sceneCountInBuildSettings);
+        SceneManager.LoadSceneAsync(currentLevel + 1);
     }
 
     public void AddGlowingBall(int number)
@@ -140,7 +138,16 @@ public class GameSceneManager : MonoBehaviour
         if(levelNameUi != null)
         {
             levelNameUi.gameObject.SetActive(showHide);
-            levelNameUi.DOText("Level " + currentLevel + " Completed! Yay! \nScore on this level: " + scoreOnThisLevel + "\nTotal score: " + glowingBalls, 5f);
+            levelNameUi.color = new Color(1f, 1f, 1f, 0f);
+            if(currentLevel == 2)
+            {
+                levelNameUi.text = "Tutorial level completed! Yay! \nScore on this level: " + scoreOnThisLevel + "\nTotal score: " + glowingBalls;
+            }
+            else
+            {
+                levelNameUi.text = "Level " + (currentLevel - 2) + " Completed! Yay! \nScore on this level: " + scoreOnThisLevel + "\nTotal score: " + glowingBalls;
+            }
+            levelNameUi.DOFade(1f, 6f).SetEase(Ease.OutCubic);
         }
     }
 
@@ -149,6 +156,22 @@ public class GameSceneManager : MonoBehaviour
         if(trunkGlowAnimation != null)
         {
             trunkGlowAnimation.Glow();
+        }
+    }
+
+    public void GlowSwirl()
+    {
+        if (swirlGlowAnimation != null)
+        {
+            swirlGlowAnimation.Glow();
+        }
+    }
+
+    public void StartLeaves()
+    {
+        if (leaves != null)
+        {
+            leaves.StartLeaves();
         }
     }
 
