@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.66, y: 20.4}
+  m_AnchoredPosition: {x: -8.34, y: 20.4}
   m_SizeDelta: {x: 34.53, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3157826605918944544
@@ -184,7 +184,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1726949584223018632, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
+  - {fileID: 8099344978284650737, guid: 7d15e19f207aa7049bb64bca9a27dfe1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -242,8 +242,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Glowing balls: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
-  m_sharedMaterial: {fileID: -1726949584223018632, guid: 3ae3090ebb0ffee479fcea27ff3b60c1,
+  m_fontAsset: {fileID: 11400000, guid: 7d15e19f207aa7049bb64bca9a27dfe1, type: 2}
+  m_sharedMaterial: {fileID: 8099344978284650737, guid: 7d15e19f207aa7049bb64bca9a27dfe1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -422,6 +422,7 @@ MonoBehaviour:
   - Level_2
   - Level_3
   trunkGlowAnimation: {fileID: 0}
+  swirlGlowAnimation: {fileID: 0}
 --- !u!1 &4295906236418261126
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +480,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1726949584223018632, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
+  - {fileID: 8099344978284650737, guid: 7d15e19f207aa7049bb64bca9a27dfe1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -537,7 +538,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ae3090ebb0ffee479fcea27ff3b60c1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7d15e19f207aa7049bb64bca9a27dfe1, type: 2}
   m_sharedMaterial: {fileID: -7798997054479398340, guid: ef882c418a5df7b438220ba6b2c25c00,
     type: 2}
   m_fontSharedMaterials: []
@@ -564,8 +565,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -690,6 +691,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5567177877500148042, guid: ec2b304d46a7617438540a9e01cafffb,
+        type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 3157826605265808452}
+    - target: {fileID: 5567177877500148042, guid: ec2b304d46a7617438540a9e01cafffb,
+        type: 3}
+      propertyPath: testSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fc75e0e209dfd94ca1e2203abd1cfc3, type: 3}
     - target: {fileID: 5567177877500148043, guid: ec2b304d46a7617438540a9e01cafffb,
         type: 3}
       propertyPath: m_Name
