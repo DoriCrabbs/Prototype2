@@ -87,6 +87,11 @@ PrefabInstance:
       propertyPath: isEssential
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8674555311988877244, guid: 21acee77799412d429f490227a3d1dd6,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.6862745
+      objectReference: {fileID: 0}
     - target: {fileID: 8674555311988877247, guid: 21acee77799412d429f490227a3d1dd6,
         type: 3}
       propertyPath: m_LocalScale.x
