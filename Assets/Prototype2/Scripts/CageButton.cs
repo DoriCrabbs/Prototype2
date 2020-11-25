@@ -139,7 +139,7 @@ public class CageButton : MonoBehaviour
         {
             wingPivot.transform.localScale = new Vector3(0.01f, 0.01f, 1f);
             wingPivot.SetActive(true);
-            wingPivot.transform.DOScale(new Vector3(1f, 1f, 1f), 2f);
+            wingPivot.transform.DOScale(new Vector3(0.25f, 0.25f, 1f), 2f);
         }
     }
 

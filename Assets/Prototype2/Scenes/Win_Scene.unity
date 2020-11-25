@@ -1260,7 +1260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 39, y: -392}
+  m_AnchoredPosition: {x: 54, y: -392}
   m_SizeDelta: {x: 1000, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &946241938
@@ -1287,7 +1287,7 @@ MonoBehaviour:
     You have completed this version of the game.
 
     You
-    have initiated the healing of nature. :)'
+    have initiated the healing of nature. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d15e19f207aa7049bb64bca9a27dfe1, type: 2}
   m_sharedMaterial: {fileID: 8099344978284650737, guid: 7d15e19f207aa7049bb64bca9a27dfe1,
@@ -1354,10 +1354,10 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 248.57324, y: 0, z: 291.18164, w: 0}
+  m_margin: {x: 248.57324, y: 0, z: 310.56274, w: 0}
   m_textInfo:
     textComponent: {fileID: 946241938}
-    characterCount: 106
+    characterCount: 104
     spriteCount: 0
     spaceCount: 16
     wordCount: 16
