@@ -31,6 +31,15 @@ public class GameSceneManager : MonoBehaviour
     [SerializeField]
     private Leaves leaves;
 
+    [SerializeField]
+    private GameObject mainMenuConfirmWindow;
+
+    [SerializeField]
+    private Button mainMenuButton;
+
+    [SerializeField]
+    private Button restartButton;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -46,6 +55,22 @@ public class GameSceneManager : MonoBehaviour
         swirlGlowAnimation = FindObjectOfType<GlowSwirl>();
         leaves = FindObjectOfType<Leaves>();
         UpdateUi();
+        if(SceneManager.GetActiveScene().name == "Main_Menu" || SceneManager.GetActiveScene().name == "Win_Scene" || SceneManager.GetActiveScene().name == "Level_Splash")
+        {
+            ShowMainMenuButton(false);
+        }
+        else
+        {
+            ShowMainMenuButton(true);
+        }
+        if (SceneManager.GetActiveScene().name == "Win_Scene")
+        {
+            ShowRestartButton(true);
+        }
+        else
+        {
+            ShowRestartButton(false);
+        }
     }
 
     private void ResetLevel()
@@ -74,7 +99,7 @@ public class GameSceneManager : MonoBehaviour
         //Blur(true);
         yield return new WaitForSeconds(1);
         ShowLevelNameUi(true);
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(5);
         LoadNextScene();
     }
 
@@ -173,6 +198,36 @@ public class GameSceneManager : MonoBehaviour
         {
             leaves.StartLeaves();
         }
+    }
+
+    public void ShowMainMenuWindow()
+    {
+        if(mainMenuConfirmWindow != null)
+        {
+            mainMenuConfirmWindow.SetActive(true);
+        }
+    }
+
+    public void ShowMainMenuButton(bool onOff)
+    {
+        if (mainMenuButton != null)
+        {
+            mainMenuButton.gameObject.SetActive(onOff);
+        }
+    }
+
+    public void ShowRestartButton(bool onOff)
+    {
+        if (restartButton != null)
+        {
+            restartButton.gameObject.SetActive(onOff);
+        }
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadSceneAsync("Main_Menu");
+        //SceneManager.LoadSceneAsync("Win_Scene");
     }
 
     public static GameSceneManager Instance;
